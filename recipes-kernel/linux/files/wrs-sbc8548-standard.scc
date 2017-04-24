@@ -2,4 +2,12 @@ define KMACHINE wrs-sbc8548
 define KTYPE    standard
 define KARCH    powerpc
 
+# Import the standard kernel config options, but
+# skip the patches as they are already applied
+include ktypes/standard/standard.scc nopatch
+
+# Add our BSP-specific config options
 kconf non-hardware wrs-sbc8548-standard.cfg
+
+# Add BSP-specific patches
+patch 0001-PowerPC-sbc8548-fix-reboot-failed.patch
