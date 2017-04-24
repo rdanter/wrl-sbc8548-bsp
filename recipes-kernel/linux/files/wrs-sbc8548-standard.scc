@@ -2,7 +2,4 @@ define KMACHINE wrs-sbc8548
 define KTYPE    standard
 define KARCH    powerpc
 
-#include ktypes/standard.scc
-#branch wrs-sbc8548
-
 kconf non-hardware wrs-sbc8548-standard.cfg
