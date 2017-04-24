@@ -4,7 +4,8 @@ Wind River SBC8548e Board Support Package
 Building
 --------
 
-Use the following steps to build this BSP with WR Linux 9.
+Use the following steps to configure a platform project for this BSP with
+Wind River Linux 9:
 
 	$ git clone --branch WRLINUX_9_LTS_CVE /path/to/wrlinux-9
 	$ ./wrlinux-9/setup.sh --distro wrlinux --dl-layers --accept-eula yes
@@ -14,6 +15,8 @@ Use the following steps to build this BSP with WR Linux 9.
 	$ vi conf/local.conf
 
 Add: MACHINE = "wrs-sbc8548"
+
+Then build the platform with:
 
 	$ bitbake wrlinux-image-glibc-std
 
