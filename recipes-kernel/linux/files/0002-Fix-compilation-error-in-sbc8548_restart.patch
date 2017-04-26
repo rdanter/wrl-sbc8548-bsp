@@ -1,0 +1,28 @@
+From f41ba7350cbfab2afded76470b001d555d085cc8 Mon Sep 17 00:00:00 2001
+From: Richard Danter <radanter@gmail.com>
+Date: Wed, 26 Apr 2017 10:14:20 +0100
+Subject: [PATCH 2/2] Fix compilation error in sbc8548_restart
+
+Function was missing the __noreturn attribute.
+
+Signed-off-by: Richard Danter <richard.danter@windriver.com>
+---
+ arch/powerpc/platforms/85xx/sbc8548.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/arch/powerpc/platforms/85xx/sbc8548.c b/arch/powerpc/platforms/85xx/sbc8548.c
+index 8599b98..ad91ca8 100644
+--- a/arch/powerpc/platforms/85xx/sbc8548.c
++++ b/arch/powerpc/platforms/85xx/sbc8548.c
+@@ -123,7 +123,7 @@ static int __init sbc8548_probe(void)
+ 	return of_machine_is_compatible("SBC8548");
+ }
+ 
+-static void sbc8548_restart(char* cmd)
++static void __noreturn sbc8548_restart(char* cmd)
+ {
+ 	unsigned long msr, val;
+ 
+-- 
+1.9.1
+
