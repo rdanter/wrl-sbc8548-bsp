@@ -5,23 +5,19 @@ Building
 --------
 
 Use the following steps to configure a platform project for this BSP with
-Wind River Linux 9:
+Wind River Linux 8:
 
-	$ git clone --branch WRLINUX_9_LTS_CVE /path/to/wrlinux-9
-	$ ./wrlinux-9/setup.sh --distro wrlinux --dl-layers --accept-eula yes
-	$ . environment-setup-x86_64-wrlinuxsdk-linux
-	$ . oe-init-build-env
-	$ bitbake-layers add-layer /path/to/wrl-sbc8548-bsp/
-	$ vi conf/local.conf
-
-Add: MACHINE = "wrs-sbc8548"
+	$ configure --enable-board=wrs-sbc8548 \
+		--enable-rootfs=glibc_std \
+		--enable-kernel=standard \
+		--with-layer=/path/to/wrl-sbc8548-bsp
 
 Then build the platform with:
 
-	$ bitbake wrlinux-image-glibc-std
+	$ make fs
 
 -or-
 
-	$ bitbake linux-windriver
+	$ make -C build linux-windriver
 
 to build just a kernel.
