@@ -18,7 +18,6 @@ are:
 	--with-template=feature/analysis
 	--with-template=feature/debug
 	--with-template=feature/lttng
-	--with-template=feature/valgrind
 
 Then build the platform with:
 
