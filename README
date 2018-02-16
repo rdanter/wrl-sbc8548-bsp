@@ -12,6 +12,14 @@ Wind River Linux 8:
 		--enable-kernel=standard \
 		--with-layer=/path/to/wrl-sbc8548-bsp
 
+Some useful templates to consider adding for on-target debug and analysis
+are:
+
+	--with-template=feature/analysis
+	--with-template=feature/debug
+	--with-template=feature/lttng
+	--with-template=feature/valgrind
+
 Then build the platform with:
 
 	$ make fs
