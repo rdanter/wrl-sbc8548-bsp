@@ -1,5 +1,7 @@
 # Wind River SBC8548e
 
+COMPATIBLE_MACHINE_wrs-sbc8548 = "wrs-sbc8548"
+
 # Currently, only the standard kernel is supported
 TARGET_SUPPORTED_KTYPES_wrs-sbc8548 = "standard"
 
