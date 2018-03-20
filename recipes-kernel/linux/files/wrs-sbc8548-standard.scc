@@ -10,5 +10,5 @@ include ktypes/standard/standard.scc nopatch
 kconf non-hardware wrs-sbc8548-standard.cfg
 
 # Add BSP-specific patches
-patch 0001-PowerPC-sbc8548-fix-reboot-failed.patch
-patch 0002-Fix-compilation-error-in-sbc8548_restart.patch
+#patch 0001-PowerPC-sbc8548-fix-reboot-failed.patch
+#patch 0002-Fix-compilation-error-in-sbc8548_restart.patch
