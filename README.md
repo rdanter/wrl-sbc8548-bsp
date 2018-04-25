@@ -14,6 +14,9 @@ Wind River Linux LTS 17:
     $ bitbake-layers add-layer /path/to/wrl-sbc8548-bsp/
     $ echo "MACHINE = \"wrs-sbc8548\"" >> conf/local.conf
 
+If you will build an SDK and plan to use it to build kernel modules then also
+add `--templates feature/kernel-dev` when running `setup.sh` above.
+
 Build the platform with:
 
     $ bitbake wrlinux-image-glibc-std
