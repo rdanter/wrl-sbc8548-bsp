@@ -1,6 +1,9 @@
 Wind River SBC8548e Board Support Package
 =========================================
 
+**NOTE: The LTS 17 version of this BSP does not yet boot!**
+Check out the WRL_8 or WRL_9 branches for a working version.
+
 Build Instructions
 ------------------
 
